@@ -1,0 +1,15 @@
+{
+  "name": "ximalaya",
+  "version": "1.0.0",
+  "description": "node爬虫喜马拉雅FM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "p爬虫"
+  ],
+  "author": "Taylor Lee",
+  "license": "ISC"
+}
