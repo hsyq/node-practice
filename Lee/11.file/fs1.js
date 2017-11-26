@@ -7,3 +7,4 @@ fs.mkdir("yu",function(err){
    }
    console.log("目录创建成功。");
 });
+

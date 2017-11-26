@@ -62,8 +62,21 @@ connection.query(modSql,modSqlParams,function (err, result) {
          return;
    }        
   console.log('--------------------------UPDATE----------------------------');
-  console.log('UPDATE affectedRows',result.affectedRows);
+  console.log('UPDATE affectedRows',result.affectedRows);  // 更新了几行
   console.log('-----------------------------------------------------------------\n\n');
+});
+
+var delSql = 'DELETE FROM websites where id=6';
+//删
+connection.query(delSql,function (err, result) {
+        if(err){
+          console.log('[DELETE ERROR] - ',err.message);
+          return;
+        }        
+ 
+       console.log('--------------------------DELETE----------------------------');
+       console.log('DELETE affectedRows',result.affectedRows);
+       console.log('-----------------------------------------------------------------\n\n');  
 });
 connection.end();
 
