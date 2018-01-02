@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>登录</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+  h1 {
+    text-align: center;
+  }
+</style>
+<body>
+ <div class="container">
+   <h1>用户中心</h1>
+   <span><%=user.username%></span>
+
+  
+</div>
+<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(function(){
+  $('#login').click(function(){
+     const username = $('#username').val();
+     const pwd = $('#pwd').val();
+     console.log(username);
+    console.log(pwd);
+     const data = {'username':username,'pwd':pwd};
+  
+   $.ajax({
+       url:'/',
+      type:'POST',
+      data: data,
+      success: function(result,status){ 
+                    if(status == 'success'){ 
+                    location.href = '/chatroom';
+                    }
+                },
+                error: function(result,status){ 
+                    if(status == 'error'){ 
+                        location.href = '/';
+                    }
+                }
+    });
+
+  });
+ 
+   
+});
+
+</script>
+</body>
+</html>

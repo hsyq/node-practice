@@ -22,9 +22,28 @@ var string3 = buf5.toString("ascii");
 console.log(string1);
 console.log(string2);
 console.log(string3);
-
+// console.log(a);
 var buf6 = new Buffer('www.runoob.com');
 var json = buf6.toJSON(buf6);
 
 console.log(json);
+
+// buffer与字符串的长度
+var str = "你好世界世界你好";
+var buf22 = new Buffer(str);
+console.log(str.length);
+console.log(buf22);
+console.log(buf22.length);
+
+console.log(str[0]);
+str[0] = '大';
+console.log(str);
+
+var buf44 = new Buffer(13);
+console.log(buf44.length);
+
+let fs = require('fs');
+var data = fs.readFileSync('text.txt');
+console.log(data);
+console.log(data.length);
 

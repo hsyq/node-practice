@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>MyAlbum</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>my album</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	
+  </head>
+  <body>
+   <ol class="breadcrumb">
+            <li><a href="/">全部相册</a></li>
+            <li class="active"><%=albumname%></li>
+        </ol>
+
+         <div class="row">
+            <% for(var i = 0 ; i < images.length ; i++){ %>
+                <div class="col-xs-6 col-md-3">
+                    <a href="#" class="thumbnail">
+                        <img src="images/wjj.png" alt="">
+                    </a>
+                    <h4> </h4>
+                </div>
+            <%}%>
+        </div> 
+	<script src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+[0mGET / [36m304 [0m25.530 ms - -[0m
+[0mGET /stylesheets/style.css [36m304 [0m5.738 ms - -[0m
+::1 - GET / HTTP/1.1 304 - - 25.551 ms
+::1 - GET /stylesheets/style.css HTTP/1.1 304 - - 4.550 ms

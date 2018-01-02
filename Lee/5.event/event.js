@@ -1,3 +1,7 @@
+//旧版本
+//var eventEmitter = require('events').EventEmitter();
+
+//新版本
 var event = require("events");
 var eventEmitter = new event.EventEmitter();
 
@@ -15,11 +19,12 @@ var listener1 = function(){
 	console.log("监听器listener1执行……");
 }
 
+// 添加一个监听器
 var listener2 = function(){
 	console.log("监听器listener2执行……");
 }
 
-// 绑定 connection 事件，处理函数为 listener1 
+// 绑定 connection 事件，处理函数为 listener1
 eventEmitter.addListener('connect', listener1);
 eventEmitter.on("connect",listener2);
 
